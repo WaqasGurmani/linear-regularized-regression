@@ -2,75 +2,114 @@
 
 ## Dataset Name
 
-Car Price Analysis Dataset
+CarDekho Used-Car Dataset
 
 ## Source
 
-The CSV used in this project was obtained through the following Kaggle notebook:
+The dataset was obtained from the following Kaggle data card:
 
-- Reference notebook: https://www.kaggle.com/code/dhruvkp07/car-price
+- Kaggle dataset: https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho
+- Original downloaded file: `car details v4.csv`
+- Local renamed file: `raw/car_price_data.csv`
 
-The original dataset page, license, measurement units, and data-generation
-method have not yet been independently verified.
+The Kaggle data card describes the records as used-car data collected from
+websites. Detailed information about the exact collection date and scraping
+method is limited.
 
-## Current Data-Quality Warning
+## Dataset Size
 
-Initial exploratory data analysis found nearly uniform numerical distributions,
-near-zero correlations with Price, and weak logical consistency among Year,
-Mileage, and Condition.
-
-Therefore, this dataset is currently treated as a learning and data-audit
-dataset, not as verified real-world data for research conclusions.
-
-## License
-
-The dataset license has not yet been independently verified from the
-original dataset page.
-
-## Local File
-
-`raw/car_price_prediction.csv`
-
-The dataset contains 2,500 observations and 10 columns.
+- Observations: 2,059
+- Raw columns: 20
+- Regression target: `Price`
+- Raw candidate input features: 19
 
 ## Target Variable
 
-`Price` — the target variable representing the reported car price.
-The currency unit has not yet been independently verified.
+`Price` represents the reported listing price of a vehicle.
+
+The records appear to represent the Indian used-car market. However, the
+currency unit is not explicitly verified in the currently available dataset
+description and should be interpreted with this limitation in mind.
 
 ## Input Features
 
-- Car ID
-- Brand
+- Make
+- Model
 - Year
-- Engine Size
+- Kilometer
 - Fuel Type
 - Transmission
-- Mileage
-- Condition
-- Model
+- Location
+- Color
+- Owner
+- Seller Type
+- Engine
+- Max Power
+- Max Torque
+- Drivetrain
+- Length
+- Width
+- Height
+- Seating Capacity
+- Fuel Tank Capacity
 
-`Car ID` is a unique identifier and will not be used as a predictive feature.
+## License
+
+Kaggle lists the dataset with the following license information:
+
+- Database: Open Database
+- Contents: Database Contents
+
+Users should consult the original Kaggle data card before redistributing or
+using the dataset outside educational and research contexts.
 
 ## Intended Use
 
-This dataset is retained for educational experimentation, data-quality
-auditing, and machine learning pipeline development.
+The dataset will be used to implement and compare:
 
-It may be used for preliminary implementation of Linear Regression,
-Ridge Regression, Lasso Regression, and Elastic Net Regression. However,
-a verified real-world dataset will be selected for the final model
-comparison and research conclusions.
+- Linear Regression
+- Ridge Regression
+- Lasso Regression
+- Elastic Net Regression
+
+The project will evaluate preprocessing, categorical encoding, feature
+scaling, coefficient shrinkage, feature selection, cross-validation,
+hyperparameter tuning, model assumptions, and prediction performance.
+
+## Data-Quality Findings
+
+Initial data understanding identified:
+
+- No exact duplicate records
+- Missing values in technical specification columns
+- Numerical information combined with units in Engine, Max Power, and Max Torque
+- High cardinality in Model and Location
+- Imbalanced brand, location, seller, fuel, and color categories
+- Strong right-skewness in Price
+- A small number of suspiciously high Kilometer values
+- Contextually valid luxury-vehicle price extremes
 
 ## Known Limitations
 
-The available Kaggle information indicates that the dataset may contain
-synthetic or mixed-source records.
+The dataset does not provide complete documentation about its collection date,
+sampling strategy, or scraping process.
 
-Some feature combinations may not represent real vehicles, such as Tesla
-cars with Petrol or Diesel fuel types. The relationships among Price, Year,
-Mileage, Engine Size, and Condition also appear weak or unrealistic.
+Some categories are underrepresented, while major brands and cities contain
+more observations. Therefore, results should not automatically be generalized
+to the complete Indian used-car market.
 
-Therefore, results obtained from this dataset should be treated as
-educational findings. They should not be interpreted as actual car-market
-estimates or causal relationships.
+The project will treat the dataset as suitable for machine learning
+experimentation, portfolio development, and research-methodology training.
+It will not make causal claims or claim complete representation of the Indian
+automobile market.
+
+## Data Integrity
+
+The raw CSV file will remain unchanged. Data cleaning, feature extraction,
+imputation, encoding, scaling, and outlier treatment will be performed through
+documented notebooks and reproducible preprocessing pipelines.
+
+## Acknowledgement
+
+Thanks to the Kaggle contributor and collaborators for making the dataset
+available for learning and analysis.
