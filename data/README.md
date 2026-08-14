@@ -12,9 +12,7 @@ The dataset was obtained from the following Kaggle data card:
 - Original downloaded file: `car details v4.csv`
 - Local renamed file: `raw/car_price_data.csv`
 
-The Kaggle data card describes the records as used-car data collected from
-websites. Detailed information about the exact collection date and scraping
-method is limited.
+The Kaggle data card describes the records as used-car data collected from websites. Detailed information about the exact collection date and scraping method is limited.
 
 ## Dataset Size
 
@@ -27,9 +25,7 @@ method is limited.
 
 `Price` represents the reported listing price of a vehicle.
 
-The records appear to represent the Indian used-car market. However, the
-currency unit is not explicitly verified in the currently available dataset
-description and should be interpreted with this limitation in mind.
+The records appear to represent the Indian used-car market. However, the currency unit is not explicitly verified in the currently available dataset description and should be interpreted with this limitation in mind.
 
 ## Input Features
 
@@ -60,21 +56,18 @@ Kaggle lists the dataset with the following license information:
 - Database: Open Database
 - Contents: Database Contents
 
-Users should consult the original Kaggle data card before redistributing or
-using the dataset outside educational and research contexts.
+Users should consult the original Kaggle data card before redistributing or using the dataset outside educational and research contexts.
 
 ## Intended Use
 
-The dataset will be used to implement and compare:
+The dataset is used to implement and compare:
 
 - Linear Regression
 - Ridge Regression
 - Lasso Regression
 - Elastic Net Regression
 
-The project will evaluate preprocessing, categorical encoding, feature
-scaling, coefficient shrinkage, feature selection, cross-validation,
-hyperparameter tuning, model assumptions, and prediction performance.
+The project evaluates preprocessing, categorical encoding, feature scaling, coefficient shrinkage, feature selection, cross-validation, hyperparameter tuning, model assumptions, and prediction performance.
 
 ## Data-Quality Findings
 
@@ -91,25 +84,16 @@ Initial data understanding identified:
 
 ## Known Limitations
 
-The dataset does not provide complete documentation about its collection date,
-sampling strategy, or scraping process.
+The dataset does not provide complete documentation about its collection date, sampling strategy, or scraping process.
 
-Some categories are underrepresented, while major brands and cities contain
-more observations. Therefore, results should not automatically be generalized
-to the complete Indian used-car market.
+Some categories are underrepresented, while major brands and cities contain more observations. Therefore, results should not automatically be generalized to the complete Indian used-car market.
 
-The project will treat the dataset as suitable for machine learning
-experimentation, portfolio development, and research-methodology training.
-It will not make causal claims or claim complete representation of the Indian
-automobile market.
+The project treats the dataset as suitable for machine learning experimentation, portfolio development, and research-methodology training. It does not make causal claims or claim complete representation of the Indian automobile market.
 
 ## Data Integrity
 
-The raw CSV file will remain unchanged. Data cleaning, feature extraction,
-imputation, encoding, scaling, and outlier treatment will be performed through
-documented notebooks and reproducible preprocessing pipelines.
+The raw CSV file remains unchanged. Data cleaning, feature extraction, imputation, encoding, scaling, and outlier analysis are performed through documented notebooks and reproducible preprocessing pipelines.
 
 ## Acknowledgement
 
-Thanks to the Kaggle contributor and collaborators for making the dataset
-available for learning and analysis.
+Thanks to the Kaggle contributor and collaborators for making the dataset available for learning and analysis.
